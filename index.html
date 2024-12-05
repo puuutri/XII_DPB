@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Kelas XII-DPB</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        nav {
+            background-color: #4CAF50;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section Title */
+        .section-title {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 24px;
+            color: #4CAF50;
+        }
+
+        /* Slider Container */
+        .slider-container {
+            position: relative;
+            max-width: 100%;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        /* Card Container */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .card {
+            background: pink;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .card h3 {
+            font-size: 18px;
+            color: #333;
+        }
+        .card p {
+            font-size: 14px;
+            color: #666;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Navigation Buttons */
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .nav-btn.left {
+            left: 10px;
+        }
+        .nav-btn.right {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#dataSiswa">Data Siswa</a></li>
+            <li><a href="#dataGuru">Data Guru</a></li>
+            <li><a href="#jadwalPelajaran">Jadwal Pelajaran</a></li>
+            <li><a href="#jadwalPiket">Jadwal Piket</a></li>
+             <li><a href="#strukturkelas">Struktur Kelas</a></li>
+            <li><a href="#kegiatanKelas">Kegiatan Kelas</a></li>
+            <li><a href="#galeriKelas">Galeri Kelas</a></li>
+        </ul>
+    </nav>
+
+    <!-- Slider Container -->
+    <div class="slider-container">
+        <button class="nav-btn left" onclick="prevSlide()">&#8249;</button>
+        <button class="nav-btn right" onclick="nextSlide()">&#8250;</button>
+        <div class="slider">
+            <!-- Data Siswa -->
+            <div class="slide" id="dataSiswa">
+                <h2 class="section-title">Data Siswa</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <img src="polosan 2.png" alt="polosan 2">
+                        <h3>Ana</h3>
+                        <p>NISN: 0078591637</p>
+                        <p>Kelas: XII-DPB</p>
+                        <P>TTL: TUBAN,26 OKTOBER 2007</P>
+                        <P>Alamat: Desa Trantang,Dusun Sumber Agung RT:01/RW:02 KEC.Kerek
+                        <p>Kelas: XII-DPB</p>
+                    </div>
+                    <div class="card">
+                        <img src="dewi.jpg" alt="dewi">
+                        <h3>Dewi Nur Lailatun Nusa</h3>
+                        <p>NISN: 0069429396</p>
+                        <P>TTL: TUBAN,18 MEI 2006</P>
+                        <P>Alamat: Desa Mliwang,Dusun Mliwang RT:05/RW:01 KEC.Kerek
+                        <p>Kelas: XII-DPB</p>
+                        
+                    </div>
+                     <div class="card">
+                <img src="polosan 2.png" alt="polosan 2">
+                <h3>DIAH AYUK WULANDARI</h3>
+                <p>NISN: 0077604423</p>
+                <P>TTL: TUBAN,01 JUNI 2007</P>
+                <P>Alamat: Desa Gaji,Dusun Sidomulyo RT:01/RW:03 KEC.Kerek
+                <p>Kelas: XII-RPL</p>
+            </div>
+            <div class="card">
+                <img src="polosan 2.png" alt="polosan 2">
+                <h3>DITA FITRIANA</h3>
+                <p>NISN: 00894643</p>
+                <P>TTL: TUBAN,06 FEBRUARI 2008</P>
+                <P>Alamat: Desa Wolutengah RT:01/RW:03 KEC.Kerek
+                <p>Kelas: XII-DPB</p>
+            </div>
+            <div class="card">
+                <img src="efa.jpg" alt="efa">
+                <h3> EFA EGIANA AYUNI PUTRI</h3>
+                <p>NISN: 0076176847</p>
+                <P>TTL: SAMPIT,22 APRIL 2007</P>
+                <P>Alamat: Desa Baamang,Dusun Baamang Tengah RT:58/RW:07 KEC.Baamang
+                <p>Kelas: XII-DPB</p>
+            </div>
+            <div class="card">
+                <img src="polosan 2.png" alt="polosan 2">
+                <h3>ELISA NUR FAIZAH</h3>
+                <p>NISN: 0068185487</p>
+                <P>TTL: TUBAN,12 JULI 2006</P>
+                 <P>Alamat: Desa Bancar RT:04/RW:01 KEC.Bancar
+                <p>Kelas: XII-DPB</p>
+            </div>
+            <div class="card">
+                <img src="ely.jpg " alt="ely">
+                <h3>ELY ERMAWATI</h3>
+                <p>NISN: 0068117608</p>
+                <P>TTL: TUBAN,19 NOVEMBER 2006</P>
+                 <P>Alamat: Desa Tergambang,Dusun Klabang RT:02/RW:01 KEC.Bancar
+                <p>Kelas: XII-DPB</p>
+            </div>
+            <div class="card">
+                <img src="gladis.jpg" alt="gladis">
+                <h3>GLADIS MEGANTARA</h3>
+                <p>NISN: 0076551674</p>
+                <P>TTL: TUBAN,02 FEBRUARI 2007</P>
+                 <P>Alamat: Desa Socorejo RT:05/RW:01 KEC.Jenu
+                <p>Kelas: XII-DPB</p>
+            </div>
+            <div class="card">
+                <img src="irma 2.jpg" alt="irma 2">
+                <h3>IRMA NUR FADIA</h3>
+                <p>NISN: 0088929347</p>
+                <P>TTL: TUBAN,17 MARET 2008</P>
+                 <P>Alamat: Desa Gaji KEC.Kerek
+                <p>Kelas: XII-DPB</p>
+            </div>
+           <div class="card">
+                <img src="inayah.jpg" alt="inayah">
+                <h3>KHUSMIATUL INAYAH</h3>
+                <p>NISN: 0063249360</p>
+                <P>TTL: TUBAN,21 OKTOBER 2006</P>
+                 <P>Alamat: Desa Klutuk RT:10/RW:02 KEC.Tambakboyo
+                <p>Kelas: XII-DPB</p>
+           </div>
+            <div class="card">
+                <img src="laila 2.jpg" alt="laila 2">
+                <h3>LAILA MUFIDATIN</h3>
+                <p>NISN: 0067709362</p>
+                <P>TTL: TUBAN,08 DESEMBER 2006</P>
+                 <P>Alamat: Desa Gaji,Dusun Sidodadi RT:05/RW:07 KEC.Kerek
+                <p>Kelas: XII-DPB</p>
+            </div>
+            <div class="card">
+                <img src="polosan 2.png "alt="polosan 2">
+                <h3>LISA FITRIANTI</h3>
+                <p>NISN: 0067106502</p>
+                <P>TTL: TUBAN,25 JULI 2006</P>
+                 <P>Alamat: Desa Kedungrejo,Dusun Luwuk RT:03/RW:02 KEC.Kerek
+                <p>Kelas: XII-DPB</p>
+            </div>
+            <div class="card">
+                <img src="polosan 2.png" alt="polosan 2">
+                <h3>LU'LU'AH PUTRI APSANU</h3>
+                <p>NISN: 0076495278</p>
+                <P>TTL: TUBAN,11 APRIL 2007</P>
+                 <P>Alamat: Desa Temaji RT:04/RW:01 KEC.Jenu
+                <p>Kelas: XII-DPB</p>
+            </div>
+            <div class="card">
+                <img src=" polosan 2.png" alt="polosan 2">
+                <h3>NASROTUL NUR AENI MUFLIKHATIN</h3>
+                <p>NISN: 0073469011</p>
+                <P>TTL: TUBAN,13 JULI 2007</P>
+                 <P>Alamat: Desa Gadon,Dusun Mampon RT:03/RW:01 KEC.Baamang
+                <p>Kelas: XII-DPB</p>
+            </div>
+            <div class="card">
+                <img src="polosan 2.png" alt="polosan">
+                <h3>NIFA KHOTIMAH</h3>
+                <p>NISN: 0078056545</p>
+                <P>TTL: TUBAN,29 DESEMBER 2007</P>
+                 <P>Alamat: Desa Karangasem,Dusun Kedung Rejo RT:03/RW:05 KEC.Jenu
+                <p>Kelas: XII-DPB</p>
+            </div>
+            <div class="card">
+                <img src="nikmah.jpg" alt="nikmah">
+                <h3>NUR AFIDATUN NIKMAH</h3>
+                <p>NISN: 0071812445</p>
+                <P>TTL: TUBAN,11 APRIL 2007</P>
+                 <P>Alamat: Desa Klutuk RT:10/RW:02 KEC.Tambakboyo
+                <p>Kelas: XII-DPB</p>
+            </div>
+            <div class="card">
+                <img src="ida.jpg " alt="ida">
+                <h3>NUR SAIDAH</h3>
+                <p>NISN: 0075574628</p>
+                <P>TTL: TUBAN,12 APRIL 2007</P>
+                 <P>Alamat: Desa Cokrowati RT:03/RW:02 KEC.Tambakboyo
+                <p>Kelas: XII-DPB</p>
+            </div>
+            <div class="card">
+                <img src="polosan 2.png" alt="polosan">
+                <h3>NURUL HILAL ISTICHOMA</h3>
+                <p>NISN: 0074653225</p>
+                <P>TTL: TUBAN,29 AGUSTUS 2007</P>
+                 <P>Alamat: Desa Karangasem,Dusun Kedug Rejo RT:03/RW:05 KEC.Baamang
+                <p>Kelas: XII-DPB</p>
+            </div>
+            <div class="card">
+                <img src="polosan 2.png" alt="polosan">
+                <h3>PINKAN SULFIANA</h3>
+                <p>NISN: 0062658421</p>
+                <P>TTL: TUBAN,15 JULI 2006</P>
+                 <P>Alamat: Desa Dikir,Dusun Dukuh Silir RT:10/RW:04 KEC.Tambakboyo
+                <p>Kelas: XII-DPB</p>
+            </div>
+            <div class="card">
+                <img src="reva 2.jpg" alt="reva 2">
+                <h3>REFA ARDIANA</h3>
+                <p>NISN: 0067809100</p>
+                <P>TTL: TUBAN,15 NOVEMBER 2006</P>
+                 <P>Alamat: Desa Gemulung,Dusun Bangkok RT:03/RW:03 KEC.Kerek
+                <p>Kelas: XII-DPB</p>
+            </div>
+            <div class="card">
+                <img src="riska.jpg" alt="riska">
+                <h3>RISKA SEPTIANA</h3>
+                <p>NISN: 0064140504</p>
+                <P>TTL: TUBAN,08 AGUSTUS 2006</P>
+                 <P>Alamat: Desa Dasin,Dusun Karang Rejo RT:01/RW:04 KEC.Tambakboyo
+                <p>Kelas: XII-DPB</p>
+            </div>
+            <div class="card">
+                <img src="dewi 3.jpg" alt="dewi 3">
+                <h3>ROHMIATUN DEWI MAIDHOLATUL LATII</h3>
+                <p>NISN: 0075922725</p>
+                <P>TTL: TUBAN,08 JUNI 2007</P>
+                 <P>Alamat: Desa Wolutengah,Dusun Kanoman RT:02/RW:04 KEC.Kerek
+                <p>Kelas: XII-DPB</p>
+            </div>
+            <div class="card">
+                <img src="polosan 2.png" alt="polosan 2">
+                <h3>SELVIANA</h3>
+                <p>NISN: 0072333247</p>
+                <P>TTL: TUBAN,31 MEI 2007</P>
+                 <P>Alamat: Desa Mander,Dusun Pule RT:08/RW:04 KEC.Tambakboyo
+                <p>Kelas: XII-DPB</p>
+            </div>
+            <div class="card">
+                <img src="sofia.jpg " alt="sofia">
+                <h3>SHOFIA ZILIANTI</h3>
+                <p>NISN: 3065572738</p>
+                <P>TTL: TUBAN,10 JULI 2006</P>
+                 <P>Alamat: Desa Klutuk RT:13/RW:01 KEC.Tambakboyo
+                <p>Kelas: XII-DPB</p>
+            </div>
+            <div class="card">
+                <img src="sinta.jpg" alt="sinta">
+                <h3>SINTA APRILIA</h3>
+                <p>NISN: 0075034592</p>
+                <P>TTL: TUBAN,12 APRIL 2007</P>
+                 <P>Alamat: Desa Mander,Dusun Dampung RT:21/RW:11 KEC.Tambakboyo
+                <p>Kelas: XII-DPB</p>
+            </div>
+            <div class="card">
+                <img src="sugiarti.jpg " alt="sugiarti">
+                <h3>SUGIARTI</h3>
+                <p>NISN: 0071191078</p>
+                <P>TTL: TUBAN,05 MARET 2007</P>
+                 <P>Alamat: Desa Mliwang,Dusun Mliwang  RT:02/RW:01 KEC.Kerek
+                <p>Kelas: XII-DPB</p>
+            </div>
+            <div class="card">
+                <img src="polosan 2.png" alt="polosan 2">
+                <h3>THUTUT NOFITA SARI</h3>
+                <p>NISN: 0062779896</p>
+                <P>TTL: TUBAN,02 NOVEMBER 2006</P>
+                 <P>Alamat: Desa Belikanget,Dusun Nganget RT:03/RW:01 KEC.Tambakboyo
+                <p>Kelas: XII-DPB</p>
+            </div>
+           <div class="card">
+                <img src="polosan 2.png" alt="polosan 2">
+                <h3>TRI HASTUTI</h3>
+                <p>NISN: 0073975119</p>
+                <P>TTL: TUBAN,01 JULI 2007</P>
+                 <P>Alamat: Desa Mliwang,Dusun Mliwang RT:02/RW:01 KEC.Baamang
+                <p>Kelas: XII-DPB</p>
+            </div>
+            <div class="card">
+                <img src="polosan 2.png" alt="polosan 2">
+                <h3>WIDIYA RAHMADANI</h3>
+                <p>NISN: 0089428298</p>
+                <P>TTL: TUBAN,15 AGUSTUS 2008</P>
+                 <P>Alamat: Desa Wolutengah RT:05/RW:03 KEC.Kerek
+                <p>Kelas: XII-DPB</p>
+            </div>
+          </diV>
+          </div>
+            </div>
+
+           <!-- Data Guru -->
+<div class="slide" id="dataGuru">
+    <h2 class="section-title">Data Guru</h2>
+    <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="PAK AGUS.jpg" alt="PAK AGUS">
+            <h3>AGUS SISWANTO S.pd,M.pd </h3>
+            <p>NUPTK: 1761770671230172</p>
+            <p>Jabatan: Kepala sekolah</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="bu ida.jpg" alt="bu ida">
+            <h3>Siti Ida Nurjanah S.pd</h3>
+            <p>NUPTK: 1761770671230172</p>
+            <p>Jabatan: Kepala jurusan</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="bu mu'aeni.jpg" alt="bu mu'aeni">
+            <h3>Mu'aeni S.pd</h3>
+            <p>NUPTK: 8154759660130113</p>
+            <p>Jabatan: Guru produktif</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="card">
+            <img src="bu ridha.jpg" alt="bu ridha">
+            <h3>Ridha Novita Sari S.pd</h3>
+            <p>NUPTK: 5740767668130102</p>
+            <p>Jabatan: Guru bahasa jawa</p>
+        </div>
+        <!-- Card 5 -->
+        <div class="card">
+            <img src="pak mukti.jpg" alt="pak mukti">
+            <h3>Abdul Mukti S.H.,Gr</h3>
+            <p>NUPTK: 3447752654200002</p>
+            <p>Jabatan: Guru Ppkn</p>
+        </div>
+        <!-- Card 6 -->
+        <div class="card">
+            <img src="bu tata.jpg" alt="bu tata">
+            <h3>Ariesta Ika Sofiana S.pd</h3>
+            <p>NUPTK: 4741765666130142</p>
+            <p>Jabatan:Guru Matematika</p>
+        </div>
+        <!-- Card 7 -->
+        <div class="card">
+            <img src="rumiatun.jpg" alt="rumiatun">
+            <h3>Rumiatun S.pd</h3>
+            <p>NUPTK: 8960767668130102</p>
+            <p>Jabatan:Guru B.Ingris</p>
+        </div>
+        <!-- Card 8 -->
+        <div class="card">
+            <img src="pak farid.jpg" alt="pak farid">
+            <h3>Farid Nurul Huda S.pd</h3>
+            <p>NUPTK: 0836764665130302</p>
+            <p>Jabatan:Guru BK</p>
+        </div>
+        <!-- Card 9 -->
+        <div class="card">
+            <img src="bu elyana.jpg" alt="bu elyana">
+            <h3>Elyana Cyntia Dewi S.pd</h3>
+            <p>NUPTK: 8254770671130043</p>
+            <p>Jabatan: -</p>
+        </div>
+        <!-- Card 10 -->
+        <div class="card">
+            <img src="pak di'in.jpg" alt="pak di'in">
+            <h3>Nurul Mubtadiin S.pd.I/h3>
+            <p>NUPTK: 2536767668130112</p>
+            <p>Jabatan:Guru PAI</p>
+        </div>
+    </div>
+</div>
+
+
+            <!-- Jadwal Pelajaran -->
+            <div class="slide" id="JadwalPelajaran">
+    <h2 class="section-title">Jadwal Pelajaran</h2>
+    <div class="card-container">
+            <div id="jadwal-pelajaran" class="section">
+                <table style="width: 100%; text-align: left; border-collapse: collapse; font-family: Arial, sans-serif;">
+                    <thead>
+                        <tr style="background-color: pink; color:red;">
+                            <th style="background-color: pink; color: white; text-align: center; vertical-align: middle;">Hari/Jam</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">07.00-07.40</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">07.40-08.20</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">08.20-09.00</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">09.00-09.40</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">10.00-10.40</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">10.40-11.20</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">11.20-12.00</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">12.30-13.10</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">13.10-13.50</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">13.50-14.30</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">14.30-15.10</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background-color: white;">
+                            <th style="background-color: pink; color: white; text-align: center; vertical-align: middle;">Senin</th>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">Upacara</td>
+                            <td colspan="2" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">A7</td>
+                            <td colspan="2" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">A2</td>
+                            <td colspan="3"  style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">B1</td>
+                            <td colspan="3" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">A7-DPB</td>
+                        </tr>
+                        <tr style="background-color: white;">
+                            <th style="background-color: pink; color: white; text-align: center; vertical-align: middle;">Selasa</th>
+                            <td colspan="5" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">B6-DPB</td>
+                            <td colspan="6" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">B6-DPB</td>
+                            
+                        </tr>
+                        <tr style="background-color: white;">
+                            <th style="background-color: pink; color: white; text-align: center; vertical-align: middle;">Rabu</th>
+                            <td colspan="2" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">B7-DPB</td>
+                            <td colspan="4" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">B8A-DPB</td>
+                            <td colspan="5" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">B6-DPB</td>
+                        </tr>
+                        <tr style="background-color: white;">
+                            <th style="background-color: pink; color: white; text-align: center; vertical-align: middle;">Kamis</th>
+                            <td colspan="2" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">B2</td>
+                            <td colspan="5" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">B6-DPB</td>
+                            <td colspan="1" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">BK</td>
+                            <td colspan="3" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">A3</td>
+                            
+                        </tr>
+                        <tr style="background-color: white;">
+                            <th style="background-color: pink; color: white; text-align: center; vertical-align: middle;">Jumat</th>
+                            <td colspan="2" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">B2</td>
+                            <td colspan="3" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">A1</td>
+                            <td colspan="1" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">B6-DPB</td>
+                            
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">-</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">-</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">-</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">-</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+                <!-- Jadwal Piket -->
+            <div class="slide" id="jadwalPiket">
+                <h2 class="section-title">Jadwal Piket</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <h3>Senin</h3>
+                        <p> ANA</p>
+                        <p>DEWI NUR LAILATUNNISA</p>
+                        <p> DIAH AYUK WULANDARI</p>
+                        <p> DITA FITRIANA</p>
+                        <p> EFA AGIANA AYUNI PUTRI</p>
+                        <p> ELISA NUR FAIZAH</p>
+                    </div>
+                     <div class="card">
+                        <h3>Selasa</h3>
+                        <p> ELY ERMAWATI</p>
+                        <p>GLADIS MEGANTARA</p>
+                        <p> IRMA NUR FADIA</p>
+                        <p> KHUSMIATUL INAYAH</p>
+                        <p> LAILA MUFIDATIN</p>
+                    </div>
+                     <div class="card">
+                        <h3>Rabu</h3>
+                        <p> LISA FITRIANTI</p>
+                        <p>LU'LU'AH PUTRI APSANU</p>
+                        <p> NASROTUL NUR AENI MUFLIKHATIN</p>
+                        <p> NIFA KHOTIMAH</p>
+                        <p> NUR AFIDATUN NIKMAH</p>
+                        <p> NUR SAIDAH</p>
+                    </div>
+                     <div class="card">
+                        <h3>Kamis</h3>
+                        <p> NURUL HILAL ISTICHOMA</p>
+                        <p>PINKAN SULFIANA</p>
+                        <p> REFA ARDIANA</p>
+                        <p> RISKA SEPTIANI</p>
+                        <p> ROHMIATUN DEWI MAIDHOLATUL LATII</p>
+                        <p> SELVIANA</p>
+                    </div>
+                     <div class="card">
+                        <h3>Jumat</h3>
+                        <p> SHOFIA ZILIANTI</p>
+                        <p>SINTA APRILIA</p>
+                        <p> SUGIARTI</p>
+                        <p> THUTUT NOFITA SARI</p>
+                        <p> TRI HASTUTI</p>
+                        <p> WIDIYA RAHMADANI</p>
+                    </div>
+
+
+                <div class="slide" id="StrukturKelas">
+                <h2 class="section-title">Struktur Kelas</h2>
+                <div class="card-container">
+                <img src="struktur kelas.png" style="width: 400px; height: auto;">
+                </div>
+                </div>
+
+                <div class="slide" id="KegiatanKelas">
+                <h2 class="section-title">Kegiatan Kelas</h2>
+                <div class="card-container">
+                <img src="kegiatan kelas 1.jpg" style="width: 400px; height: auto;">
+                <img src="kegiatan kelas 2.jpg" style="width: 400px; height: auto;">
+                </div>
+
+                <div class="slide" id="GaleriKelas">
+                <h2 class="section-title">Galeri Kelas</h2>
+                <div class="card-container">
+                <img src="GALERI 1.jpg" style="width: 400px; height: auto;">
+                <img src="GALERI 2.jpg" style="width: 400px; height: auto;">
+                <img src="GALERI 3.jpg" style="width: 400px; height: auto;">
+                </div>
+
+                
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const slider = document.querySelector('.slider');
+            const totalSlides = document.querySelectorAll('.slide').length;
+
+            if (index >= totalSlides) currentIndex = 0;
+            else if (index < 0) currentIndex = totalSlides - 1;
+            else currentIndex = index;
+
+            const offset = -currentIndex * 100;
+            slider.style.transform = `translateX(${offset}%)`;
+        }
+
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
+    </script>
+</body>
+</html>
